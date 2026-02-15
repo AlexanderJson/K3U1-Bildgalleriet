@@ -67,4 +67,27 @@ describe("categorize()", () =>
             expect(r.get(" ")).toBeUndefined();
         });
 
+});
+
+describe("getLatestByAmount()", () =>
+{
+    test("should return correct number of results", async() =>
+    {
+        const service = new ImageService(mockRepo);
+        await service.init();
+        const r = service.getLatestByAmount("architecture", 3);
+        expect(r.length).toBe(3);
+    });
+
+    test("should return undefined when requested number is mismatched with db", async() =>
+    {
+        const service = new ImageService(mockRepo);
+        await service.init();
+        const r = service.getLatestByAmount("architecture", 30);
+        expect(r.size).toBeUndefined;
+    });
+
+
+
+
 })
