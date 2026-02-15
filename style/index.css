@@ -1,27 +1,87 @@
-body {
-    background: black;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+    /* Main layout is a grid layout.
+    I use grid-template-areas to define the main areas of the app and
+    where they should be "placed" on the site.     
+    */
 
-#image-frame 
-{
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav main"
+    "footer footer";
+    /* 2 columns. First is 250px, other takes fraction of remaining space (FR) 
+       So basically: if screen is total 1000px then -> 250px - 750px. 
+
+    */
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+
+
+main#app {
+grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    padding: 20px;
+    overflow-y: auto; 
     width: 100%;
-    aspect-ratio: 16/9;
+}
+#image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
-    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
     cursor: pointer;
+    border-radius: clamp(8px, 1.5vw, 16px); 
+}
+
+#image-frame:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 
 .gallery-grid 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap:22px;
-    padding: 22px;
-    max-width: 1200px;
+    /* min width for coulmn = between 200px and 350px based on vw
+       So browser calculates how many cols can fit by using
+       (min col width + gap). 
+       Example: 
+       gallery total width = 1200px, 
+       min col width = 300px
+       = 1200/(300+gap)
+
+       then remaining space distributes equally (1fr)
+
+    */
+    grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 20vw, 350px), 1fr));
     margin: 0 auto;
+    gap: clamp(12px, 2vw, 32px);
+    padding: clamp(12px, 2vw, 32px);
+    max-width: 1400px;
+
+    background-color: rgba(255, 255, 255, 0.03);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
 }
+
