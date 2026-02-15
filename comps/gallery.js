@@ -1,7 +1,16 @@
-export const galleryContainer = (els = []) => 
+import { singleImg } from "./singleImg.js";
+
+export const galleryContainer = (metadata = []) => 
 {
     const div = document.createElement('div');
     div.classList.add('gallery-grid');
-    div.append(...els);
+
+    metadata.forEach(element => {
+        const imgEl = singleImg(element);
+        div.append(imgEl);
+    });
+
+
+    //div.append(...els);
     return div;
 }

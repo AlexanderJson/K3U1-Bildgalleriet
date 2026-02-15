@@ -4,16 +4,18 @@ export const jsonHelper =
 {
 
 
-    read: async (path) => 
+    read: async (url) => 
     {
-        try {
-                const data = await fs.readFile(path, 'utf8');
-                return JSON.parse(data);
+        try
+            {
+                const resp = await fetch(url);
+                if(resp.ok) return await resp.json(); 
             }
+
         catch(e)
             {
                 if(error.code === 'ENOENT') return null;
-                throw error;
+                throw new Error(`Error occured! Status: ${resp.status} Error: ${error}`);
             }
     },
 
