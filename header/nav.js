@@ -1,3 +1,4 @@
+/*
 export const menu = () =>
 {
     const nav = document.createElement('nav');
@@ -16,4 +17,4 @@ export const menu = () =>
     nav.append(ul);
     return nav;
 
-}
+}*/

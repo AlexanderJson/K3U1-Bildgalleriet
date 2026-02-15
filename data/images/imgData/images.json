@@ -207,7 +207,7 @@
       "id": "30",
       "title": "Shadowed Grandeur",
       "alt": "A dark, atmospheric view of stone pillars and a grand staircase leading toward light",
-      "tags": ["architecture", "interior", "pillars", "cinematic"],
+      "tags": ["architecture", "interior", "pillars","trending", "cinematic"],
       "src": "data/images/cat1/peter-herrmann-1__n2B24HB8-unsplash.jpg"
     },
     {
@@ -221,7 +221,7 @@
       "id": "32",
       "title": "Golden Wasp Profile",
       "alt": "Detailed macro portrait of a yellow and black wasp against a dark background",
-      "tags": ["nature", "wildlife", "macro", "wasp"],
+      "tags": ["nature", "wildlife", "macro","trending", "wasp"],
       "src": "data/images/cat1/usgs-R_W86FHa-Sk-unsplash.jpg"
     },
     {
@@ -263,7 +263,7 @@
       "id": "38",
       "title": "Purple Nectar",
       "alt": "A bee hanging upside down from a purple lavender-like flower to reach nectar",
-      "tags": ["nature", "wildlife", "macro", "bee", "flower"],
+      "tags": ["nature", "wildlife", "macro", "bee", "trending","flower"],
       "src": "data/images/cat1/jason-leung-Qgb9urMZ8lw-unsplash.jpg"
     },
     {
