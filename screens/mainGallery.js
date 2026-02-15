@@ -6,10 +6,10 @@ import { galleryContainer } from "../comps/gallery.js";
 export const mainGallery = async (service) =>
 {
     const div = document.createElement('div');
-    const data = service.getByTag("architecture");
+    let currentResult = service.getByTag("banner"); //todo remove hardcode
 
     const galleryDiv = document.createElement('div');
-    const gallery = galleryContainer(data);
+    const gallery = galleryContainer(currentResult);
     galleryDiv.append(gallery);
     const searchBar = document.createElement('div');
     searchBar.classList.add('search-bar');
@@ -23,14 +23,22 @@ export const mainGallery = async (service) =>
     searchBtn.classList.add('search-btn');
     searchBar.append(input,searchBtn);    
 
+    const render = (data) => 
+    {
+        galleryDiv.innerHTML = '';
+        galleryDiv.append(galleryContainer(data));
+    }
+
+
     const handleSearch = () => 
     {
         const query = input.value.trim();
         if(!query) return;
-        const newData = service.getByTag(query);
-        galleryDiv.innerHTML = '';
-        galleryDiv.append(searchBar,galleryContainer(newData));
+        currentResult = query ? service.getByTag(query) : service.getTrending();
+        render(currentResult);
     }
+
+
 
     searchBtn.addEventListener("click", handleSearch);
     input.addEventListener("keypress", (e) => {
@@ -38,7 +46,7 @@ export const mainGallery = async (service) =>
     });
 
     
-    
+    render(currentResult);
     div.append(searchBar,galleryDiv);
     return div;
 }

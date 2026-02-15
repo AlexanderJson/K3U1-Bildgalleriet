@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Snowy Pine Forest",
       "alt": "Sunlight filtering through snow-covered evergreen trees in a dense forest",
-      "tags": ["nature", "snow", "winter", "forest"],
+      "tags": ["nature","banner", "snow", "winter", "forest"],
       "src": "data/images/cat1/dmitrii-shirnin-mqEKg5D6lnE-unsplash.jpg"
     },
     {
@@ -102,7 +102,7 @@
       "id": "15",
       "title": "The Milky Way Core",
       "alt": "A vertical view of the Milky Way's galactic center stretching across a dark, star-filled sky",
-      "tags": ["space", "milky way", "stars", "night sky"],
+      "tags": ["space","banner", "milky way", "stars", "night sky"],
       "src": "data/images/cat1/gary-scott-YvRTYzkT6Hs-unsplash.jpg"
     },
     {
@@ -172,7 +172,7 @@
       "id": "25",
       "title": "Ornate Library",
       "alt": "Floor-to-ceiling bookshelves in a classical baroque library with gold accents",
-      "tags": ["architecture", "interior", "library", "classical"],
+      "tags": ["architecture", "banner","interior", "library", "classical"],
       "src": "data/images/cat1/ahmet-yuksek-6vBqpVyYHX0-unsplash.jpg"
     },
     {
@@ -235,7 +235,7 @@
       "id": "34",
       "title": "Hovering Flight",
       "alt": "Action shot of a bee in mid-air approaching a cluster of pink flowers",
-      "tags": ["nature", "wildlife", "macro", "bee", "flight"],
+      "tags": ["nature", "wildlife","banner", "macro", "bee", "flight"],
       "src": "data/images/cat1/aaron-burden-6csuZQ9oZcI-unsplash.jpg"
     },
     {

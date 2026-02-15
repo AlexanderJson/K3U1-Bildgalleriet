@@ -7,7 +7,7 @@ export class ImageService
     constructor(repo) {
         this.repo = repo;
         this.data = null; 
-        this.categorizedData = [];
+        this.categorizedData = new Map();
 
     }
 
@@ -19,7 +19,7 @@ export class ImageService
 
 
 
-
+   
 
 
     /*
@@ -50,25 +50,38 @@ export class ImageService
         {
             img[key]?.forEach(tag => 
                 {
-                    acc[tag] ??= []; 
-                    acc[tag].push(img);
+                    const normTag = tag.toLowerCase();
+                    if(!acc.has(normTag)) acc.set(normTag,[])
+                    acc.get(normTag).push(img);
                 });
             return acc;
-        }, {});
+        }, new Map());
 
     }
 
-    
+    getLatestByAmount(tag,n)
+    {
+        const data = this.categorizedData.get(tag) || [];
+        return data.slice(0,n);
+    }
+
+    getTrending()
+    {
+        return this.getLatestByAmount("trending", 10) || [];
+    }
+
+    getMonthlyBanner()
+    {
+        return this.getLatestByAmount("banner", 5) || [];
+    }
+
     getByTag(tag)
     {
-        return this.categorizedData?.[tag]  || [];
+        return this.getLatestByAmount(tag, 10) || [];
     }
 
 
-    async getLatestByAmount(n)
-    {
-        return this.repo.read();
-    }
+
 
 
 
