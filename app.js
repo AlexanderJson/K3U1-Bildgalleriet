@@ -1,21 +1,16 @@
-import { imageFrame } from "./comps/imageFrame.js";
-import { galleryContainer } from "./comps/gallery.js"; 
-function initApp()
+import { singleImg } from "./comps/singleImg.js"
+import { fetchApi } from "./data/api/apiFetch.js";
+
+
+async function initApp()
 {
     const appDiv = document.getElementById('app');
-    const ap = './data/images/cat1/alexandra-Ao_aHzy6IC8-unsplash.jpg';
-    const bp = './data/images/cat2/aldebaran-s-uXchDIKs4qI-unsplash.jpg';
-    const cp = './data/images/cat3/anastasiia-buchinskaia-GLbsWvBQk_8-unsplash.jpg';
-    const dp = './data/images/cat4/aaron-burden-6csuZQ9oZcI-unsplash.jpg';
+    const data = await fetchApi("./data/images/imgData/images.json");
 
-    const a = imageFrame(ap);    
-    const b = imageFrame(bp);    
-    const c = imageFrame(cp); 
-    const d = imageFrame(dp);    
-
-    const gallery = galleryContainer([a,b,c,d])
-
-    appDiv.append(gallery);
+    data.images.forEach(element => {
+        const imgEl = singleImg(element);
+        appDiv.append(imgEl);
+    });
     return appDiv;
 
 }

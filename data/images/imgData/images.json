@@ -1,0 +1,22 @@
+{
+  "images": 
+    [
+      {
+        "id": "1",
+        "title": "1",
+        "alt": "A snowy tree on a winter landscape",
+        "tags": ["nature","snow","winter"],
+        "src": "data/images/cat1/1.jpg"
+      },
+      {
+        "id": "2",
+        "title": "2",
+        "alt": "A modern gray building infront of a blue sky",
+        "tags": ["architecture","modern","city"],
+        "src": "data/images/cat3/2.jpg"
+      }
+    ]
+}
+
+
+

@@ -40,7 +40,7 @@ grid-area: main;
     overflow-y: auto; 
     width: 100%;
 }
-#image-frame {
+.image-frame {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -51,7 +51,7 @@ grid-area: main;
     border-radius: clamp(8px, 1.5vw, 16px); 
 }
 
-#image-frame:hover {
+.image-frame:hover {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }

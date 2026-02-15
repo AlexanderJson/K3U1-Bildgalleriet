@@ -1,10 +1,13 @@
-export const imageFrame = (url) =>
+
+export const singleImg = (imgData) =>
 {
     const div = document.createElement('div');
     const img = document.createElement('img');
-    img.id = "image-frame";
-    img.src = url;
+    img.classList.add("image-frame");
+    img.src = imgData.src;
+    img.alt = imgData.alt;
     div.append(img);
     return div;
 
 }
+
