@@ -23,6 +23,24 @@ export const mainGallery = async (service) =>
     searchBtn.classList.add('search-btn');
     searchBar.append(input,searchBtn);    
 
+
+    const chipCategories = ["nature", "space", "architecture", "bee"];
+    const chipContainer = document.createElement('div');
+    chipContainer.classList.add('chip-container');
+    chipCategories.forEach(chip =>
+        {
+            const chipBtn = document.createElement('button');
+            chipBtn.classList.add('chip-btn');
+            chipBtn.innerText = chip;
+
+            chipBtn.addEventListener('click', () => 
+            {
+                currentResult = service.getByTag(chip);
+                render(currentResult); 
+            });
+            chipContainer.append(chipBtn);
+        });
+
     const render = (data) => 
     {
         galleryDiv.innerHTML = '';
@@ -47,6 +65,6 @@ export const mainGallery = async (service) =>
 
     
     render(currentResult);
-    div.append(searchBar,galleryDiv);
+    div.append(searchBar,chipContainer,galleryDiv);
     return div;
 }

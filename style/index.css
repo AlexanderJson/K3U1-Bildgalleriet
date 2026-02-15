@@ -1,127 +1,297 @@
+
+
+
         :root {
-            --accent: #3b82f6;
-            --bg-main: #f8fafc;
-            --sidebar-width: 280px;
+            --primary: #3b82f6;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --radius-lg: 24px;
+            --radius-md: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    /* Main layout is a grid layout.
+    I use grid-template-areas to define the main areas of the app and
+    where they should be "placed" on the site.     
+    */
+
+
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    /* 2 columns. First is 250px, other takes fraction of remaining space (FR) 
+       So basically: if screen is total 1000px then -> 250px - 750px. 
+
+    */
+    grid-template-columns: 250px 2fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+
+
+main#app {
+grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    padding: 20px;
+    overflow-y: auto; 
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+
+
+        .search-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 99px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-main);
-            color: #1e293b;
-            display: grid;
-            grid-template-areas:
-                "header header"
-                "nav main"
-                "footer footer";
-            grid-template-columns: var(--sidebar-width) 1fr;
-            grid-template-rows: auto 1fr auto;
-            min-height: 100vh;
-            transition: all 0.3s ease;
+        .search-btn:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
         }
 
-        /* Responsive Layout Overrides */
-        @media (max-width: 768px) {
-            body {
-                grid-template-areas:
-                    "header"
-                    "main"
-                    "nav"
-                    "footer";
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr auto auto;
-            }
-            nav {
-                position: sticky;
-                bottom: 0;
-                width: 100%;
-                z-index: 50;
-                border-top: 1px solid rgba(0,0,0,0.1);
-            }
+.image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+    cursor:zoom-in;
+    display: block;
+    border-radius: clamp(8px, 1.5vw, 16px); 
+}
+
+.image-frame:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+header 
+{ 
+            grid-area: header; 
+            padding: 1.5rem 2rem;
+            background: #fff;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+}
+
+header h2
+{
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+}
+
+        nav { 
+            grid-area: nav; 
+            padding: 2rem;
+            background: #fff;
+            border-right: 1px solid rgba(0,0,0,0.05);
         }
+nav p 
+{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700; 
+    margin-bottom: 1rem;
+}
 
-        header { grid-area: header; padding: 1rem 2rem; background: white; border-bottom: 1px solid #e2e8f0; }
-        nav { grid-area: nav; background: white; padding: 2rem; border-right: 1px solid #e2e8f0; }
-        main#app { grid-area: main; display: flex; flex-direction: column; gap: 2rem; padding: 2rem; overflow-y: auto; width: 100%; }
-        footer { grid-area: footer; padding: 1rem; text-align: center; font-size: 0.8rem; color: #64748b; }
+        footer { 
+            grid-area: footer; 
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+nav ul
+{
+    list-style: none;
+    display: flex;    
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-        /* Optimized Search Bar */
-        .search-bar {
+nav li 
+{
+    cursor: pointer;
+    font-weight: 600;
+}
+ .search-bar {
+            display: flex;
+            align-items: center;
             position: relative;
             width: 100%;
             max-width: 600px;
-            margin-bottom: 1rem;
+            margin: 0 auto;
+            background: #fff;
+            padding: 6px;
+            border-radius: 99px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid transparent;
         }
 
-        .search-input {
-            width: 100%;
-            padding: 1rem 1rem 1rem 3.5rem;
-            font-size: 1rem;
-            background: white;
-            border: 2px solid transparent;
-            border-radius: 16px;
-            outline: none;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .search-input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.15);
+        .search-bar:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
             transform: translateY(-2px);
         }
 
-        .search-icon {
-            position: absolute;
-            left: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #94a3b8;
-            pointer-events: none;
-        }
-
-        /* Gallery Grid with staggered animation */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 25vw, 400px), 1fr));
-            gap: 1.5rem;
+        .search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            background: transparent;
+            color: var(--text);
             width: 100%;
         }
 
-        .image-container {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.5s ease forwards;
+        .search-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 99px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
+        .search-btn:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+
+        /* Gallery Grid Enhancement */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(clamp(280px, 30vw, 400px), 1fr));
+            gap: clamp(1rem, 2.5vw, 2rem);
+            padding: clamp(1rem, 2vw, 2rem);
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-lg);
         }
 
         .image-frame {
             width: 100%;
             aspect-ratio: 16 / 10;
             object-fit: cover;
-            border-radius: 12px;
-            background: #e2e8f0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: zoom-in;
+            border-radius: var(--radius-md);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            cursor: zoom-in;
+            display: block;
         }
 
         .image-frame:hover {
-            transform: scale(1.03) translateY(-5px);
+            transform: translateY(-6px) scale(1.01);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         /* Empty State */
-        .empty-state {
+        .empty-message {
+            grid-column: 1 / -1;
             text-align: center;
-            padding: 4rem;
-            color: #94a3b8;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+            font-style: italic;
         }
+
+
+.chip-container 
+{
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 600px;
+}
+
+.chip-btn 
+{
+        padding: 8px 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        font-size: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+}
+
+.chip-btn:hover 
+{
+    background: var(--primary);
+    color: var(--primary);
+    transform: translateY(-1px);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+
+.gallery-grid 
+{
+    display: grid;
+    /* min width for coulmn = between 200px and 350px based on vw
+       So browser calculates how many cols can fit by using
+       (min col width + gap). 
+       Example: 
+       gallery total width = 1200px, 
+       min col width = 300px
+       = 1200/(300+gap)
+
+       then remaining space distributes equally (1fr)
+
+    */
+    grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 20vw, 350px), 1fr));
+    margin: 0 auto;
+    gap: clamp(12px, 2vw, 32px);
+    padding: clamp(12px, 2vw, 32px);
+    max-width: 1400px;
+
+    background-color: rgba(255, 255, 255, 0.03);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+}
+

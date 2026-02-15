@@ -56,8 +56,9 @@ export class ImageService
                 });
             return acc;
         }, new Map());
-
     }
+
+
 
     getLatestByAmount(tag,n)
     {
@@ -78,6 +79,27 @@ export class ImageService
     getByTag(tag)
     {
         return this.getLatestByAmount(tag, 10) || [];
+    }
+
+
+    combineByTags(tags = [])
+    {
+        if (!tags.length) return [];
+        const sets = tags
+            .map(tag => this.categorizedData.get(tag.toLowerCase()))
+            .filter(Boolean);
+        if(!sets.length) return [];
+        return [...sets.reduce((acc, set) =>
+            new Set([...acc].filter(img => set.has(img)))
+        )];
+    }
+
+    generateCategories()
+    {
+        const tempCategories = ["nature", "space", "architecture", "bee"];
+        const byCategory = this.combineByTags(tempCategories);
+        return byCategory;
+
     }
 
 
