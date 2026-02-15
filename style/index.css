@@ -265,7 +265,19 @@ nav li
     transform: translateY(-1px);
     background: rgba(59, 130, 246, 0.05);
 }
-
+.image-frame.fullsize
+{
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 1000;
+    background: #000;
+    cursor: zoom-out;
+}
 
 .gallery-grid 
 {

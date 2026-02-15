@@ -15,6 +15,7 @@ export const mainGallery = async (service) =>
     searchBar.classList.add('search-bar');
     const input = document.createElement('input');
     input.type = "text";
+    input.setAttribute("aria-label", "Search images by tag");
     input.classList.add('search-input');
     input.placeholder = "Search by tags..";
 
@@ -22,6 +23,7 @@ export const mainGallery = async (service) =>
     searchBtn.innerText = "Search";
     searchBtn.classList.add('search-btn');
     searchBar.append(input,searchBtn);    
+    searchBtn.setAttribute("aria-label", "Search");
 
 
     const chipCategories = ["nature", "space", "architecture", "bee"];
@@ -32,14 +34,17 @@ export const mainGallery = async (service) =>
             const chipBtn = document.createElement('button');
             chipBtn.classList.add('chip-btn');
             chipBtn.innerText = chip;
-
+            chipBtn.setAttribute("role", "button");
+            chipBtn.setAttribute("aria-pressed", "false");
             chipBtn.addEventListener('click', () => 
             {
                 currentResult = service.getByTag(chip);
+                chipBtn.setAttribute("aria-pressed", "true");
                 render(currentResult); 
             });
             chipContainer.append(chipBtn);
         });
+
 
     const render = (data) => 
     {
