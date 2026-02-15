@@ -86,8 +86,4 @@ describe("getLatestByAmount()", () =>
         const r = service.getLatestByAmount("architecture", 30);
         expect(r.size).toBeUndefined;
     });
-
-
-
-
 })
