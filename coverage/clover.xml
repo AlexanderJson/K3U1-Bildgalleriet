@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1771186306910" clover="3.2.0">
-  <project timestamp="1771186306910" name="All files">
+<coverage generated="1771186344152" clover="3.2.0">
+  <project timestamp="1771186344152" name="All files">
     <metrics statements="189" coveredstatements="180" conditionals="12" coveredconditionals="11" methods="9" coveredmethods="6" elements="210" coveredelements="197" complexity="0" loc="189" ncloc="189" packages="1" files="2" classes="2"/>
     <file name="ImageRepository.js" path="C:\Users\Alexa\Desktop\K3U1 - Bildgalleriet\K3U1-Bildgalleriet\data\api\ImageRepository.js">
       <metrics statements="30" coveredstatements="30" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
