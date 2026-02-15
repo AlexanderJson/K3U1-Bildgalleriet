@@ -1,12 +1,16 @@
-import { singleImg } from "./comps/singleImg.js"
-import { galleryContainer } from "./comps/gallery.js";
-import { imageService } from "./data/api/imageService.js";
+import { ImageService } from "../data/api/imageService.js";
+import { mainGallery } from "./screens/mainGallery.js";
+import {imageRepository} from "./data/api/ImageRepository.js"
+const repo = new imageRepository("./data/images/imgData/images.json");
+const imageService = new ImageService(repo);
+
 async function initApp()
 {
+    await imageService.init();
+
     const appDiv = document.getElementById('app');
-    const data = await imageService.getByTag("./data/images/imgData/images.json", "snow");
-    
-    const gallery = galleryContainer(data);
+    const gallery = await mainGallery(imageService);
+
     appDiv.append(gallery);
     return appDiv;
 

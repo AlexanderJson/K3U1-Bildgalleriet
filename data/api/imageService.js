@@ -1,4 +1,3 @@
-const URL = "./data/images/imgData/images.json";
 
 
 
@@ -7,40 +6,64 @@ export class ImageService
 {
     constructor(repo) {
         this.repo = repo;
+        this.data = null; 
+        this.categorizedData = [];
+
     }
 
     async init()
     {
-        const data = await this.repo.read();
-        this.tagIndex = this.buildTagIndex(data);
+        this.data = await this.repo.fetch();
+        this.categorizedData = this.categorize(this.data.images);
     }
 
 
-    filter(data,key,query)
-    {
-        if(!query) return data;
+
+
+
+
+    /*
+        I am using a reducer here to reorganise
+        every key/value pair by tag words in a new list.
+        This is mostly for optimizing data retrieval for user
+        requests. 
         
-        return data.images
-        .filter(img => img[key]?.includes(query))
-        .map(img => img.url);
-    }
+        The reducer is a single pass function (it runs once to create all categories) that
+        basically sums/reorders data. This is smart in a scenario
+        like this project, where I have to display images based on categories. 
+        Since we only have to run this once, store it and reuse the data, instead
+        of performing lookups in the json data over and over. 
 
-    buildTagIndex(data)
+        The way it works is that it creates a container (accumulator),
+        takes a list of objects (in this case). First it "looks" at each
+        object in the data by key (for example tags), then checks if 
+        the accumulator has created a list based on that key already, 
+        if it hasn't, it creates a new empty list for that key and then
+        pushes the object into that list. Otherwise same with existing list.
+        So we could get "nature: img1,img3, food:img2"
+        instead of "img1: tags:nature", "img2:tags:food", "img3:tags:nature"
+       
+    */
+    categorize(images, key = 'tags')
     {
-        return data.images.reduce((index,img) =>
+        return images.reduce((acc, img) =>
         {
-            img.tags?.forEach(tag => {
-                index[tag] ??= [];
-                index[tag].push(img);
-            });
-            return index;
+            img[key]?.forEach(tag => 
+                {
+                    acc[tag] ??= []; 
+                    acc[tag].push(img);
+                });
+            return acc;
         }, {});
+
     }
 
-    async getByTag(tag)
+    
+    getByTag(tag)
     {
-        return this.tagIndex?.[tag]  || [];
+        return this.categorizedData?.[tag]  || [];
     }
+
 
     async getLatestByAmount(n)
     {
@@ -67,6 +90,8 @@ export class ImageService
 */
 
 /*
+
+
 
 export const imageService =
 {

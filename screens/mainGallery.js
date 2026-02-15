@@ -1,11 +1,15 @@
-import { jsonHelper } from "../data/api/json/jsonHelper"
-import { singleImg } from "../comps/singleImg"
 
+import { galleryContainer } from "../comps/gallery.js";
 
-export const mainGallery = () =>
+export const mainGallery = async (service) =>
 {
-    const path = "data/images/imgData";
-    const fileName = "/images.json"
-    const url = jsonHelper.read(path+fileName);
-    const ia = singleImg();
+    const div = document.createElement('div');
+    
+    const searchBar = document.createElement('div');
+    
+    
+    const data = service.getByTag("architecture");
+    const gallery = galleryContainer(data);
+    div.append(gallery);
+    return div;
 }
