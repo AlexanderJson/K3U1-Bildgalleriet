@@ -1,0 +1,298 @@
+{
+  "images": [
+    {
+      "id": "1",
+      "title": "Snowy Pine Forest",
+      "alt": "Sunlight filtering through snow-covered evergreen trees in a dense forest",
+      "tags": ["nature","banner", "snow", "winter", "forest"],
+      "src": "data/images/cat1/dmitrii-shirnin-mqEKg5D6lnE-unsplash.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Solitary Tree in Mist",
+      "alt": "A large bare tree standing alone in a foggy snow field at sunrise",
+      "tags": ["nature", "snow", "winter", "minimalism", "mist"],
+      "src": "data/images/cat1/dawid-zawila-hbUh0mnK7Tw-unsplash.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Alpine Peak",
+      "alt": "Jagged mountain peaks covered in snow against a clear sunset sky",
+      "tags": ["nature", "snow", "mountains", "peaks"],
+      "src": "data/images/cat1/marek-piwnicki-rwcONvax9qE-unsplash.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Frozen Lake Texture",
+      "alt": "Aerial view of cracked blue ice on a frozen lake surface",
+      "tags": ["nature", "snow", "ice", "aerial", "texture"],
+      "src": "data/images/cat1/kristaps-ungurs-f0BKOe5J_Cg-unsplash.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Winter Horizon",
+      "alt": "A lone tree centered in a wide, misty frozen landscape",
+      "tags": ["nature", "snow", "winter", "horizon"],
+      "src": "data/images/cat1/dawid-zawila-prjYWL-sAww-unsplash.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Golden Hour Pines",
+      "alt": "Snow-heavy pine trees glowing under a warm morning sun",
+      "tags": ["nature", "snow", "winter", "forest", "sunlight"],
+      "src": "data/images/cat1/harri-p-L8p9qMMiCWs-unsplash.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Misty Winter River",
+      "alt": "Steam rising from a river surrounded by deep snow at dawn",
+      "tags": ["nature", "snow", "winter", "river", "mist"],
+      "src": "data/images/cat1/daniil-silantev-irbKrFMeELg-unsplash.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Minimalist Slope",
+      "alt": "A line of frosted trees disappearing into a white foggy slope",
+      "tags": ["nature", "snow", "winter", "minimalism"],
+      "src": "data/images/cat1/iuliu-illes--FMBSd5ZPdk-unsplash.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Bird on Pine",
+      "alt": "A small bird perched on the very top of a snow-covered evergreen tree",
+      "tags": ["nature", "snow", "winter", "wildlife"],
+      "src": "data/images/cat1/alexandra-Ao_aHzy6IC8-unsplash.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Arid Earth Textures",
+      "alt": "Aerial view of eroded grey soil and dry riverbed patterns",
+      "tags": ["nature", "texture", "aerial", "earth"],
+      "src": "data/images/cat1/daniel-miksha-Y77C0rt1dBI-unsplash.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Crescent Planet",
+      "alt": "A close-up of a planet's textured surface illuminated as a thin crescent against deep black space",
+      "tags": ["space", "planet", "minimalism", "celestial"],
+      "src": "data/images/cat1/daniel-olah-dFA5XycbhoQ-unsplash.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Orion Nebula",
+      "alt": "A vibrant pink and purple celestial nebula swirling with dust and young stars",
+      "tags": ["space", "nebula", "cosmos", "stars"],
+      "src": "data/images/cat1/aldebaran-s-uXchDIKs4qI-unsplash.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Andromeda Galaxy",
+      "alt": "The spiral Andromeda galaxy tilted at an angle, surrounded by a dense field of distant stars",
+      "tags": ["space", "galaxy", "astronomy", "cosmos"],
+      "src": "data/images/cat1/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Earth at Night",
+      "alt": "View from orbit showing city lights glowing across the dark surface of Earth under a thin atmosphere",
+      "tags": ["earth", "space", "night", "city lights"],
+      "src": "data/images/cat1/nasa-Q1p7bh3SHj8-unsplash.jpg"
+    },
+    {
+      "id": "15",
+      "title": "The Milky Way Core",
+      "alt": "A vertical view of the Milky Way's galactic center stretching across a dark, star-filled sky",
+      "tags": ["space","banner", "milky way", "stars", "night sky"],
+      "src": "data/images/cat1/gary-scott-YvRTYzkT6Hs-unsplash.jpg"
+    },
+    {
+      "id": "16",
+      "title": "Shooting Star at Dusk",
+      "alt": "A long streak of a meteor falling through a purple and orange twilight sky filled with stars",
+      "tags": ["nature", "space", "shooting star", "sunset", "stars"],
+      "src": "data/images/cat1/diego-ph-5LOhydOtTKU-unsplash.jpg"
+    },
+    {
+      "id": "17",
+      "title": "Star Trails",
+      "alt": "Long exposure photography showing the circular motion of stars in the night sky",
+      "tags": ["space", "stars", "long exposure", "abstract"],
+      "src": "data/images/cat1/gabriele-garanzelli-PzO_CitnJdI-unsplash.jpg"
+    },
+    {
+      "id": "18",
+      "title": "Earth's Horizon",
+      "alt": "High altitude view showing the curve of the Earth, white clouds, and the thin blue line of the atmosphere against black space",
+      "tags": ["earth", "space", "horizon", "atmosphere"],
+      "src": "data/images/cat1/daniel-olah-HNkgPFBShSw-unsplash.jpg"
+    },
+    {
+      "id": "19",
+      "title": "Galactic Clouds",
+      "alt": "Wide view of a colorful galaxy filled with blue, purple, and pink gas clouds and billions of stars",
+      "tags": ["space", "galaxy", "nebula", "stars"],
+      "src": "data/images/cat1/jeremy-thomas-E0AHdsENmDg-unsplash.jpg"
+    },
+    {
+      "id": "20",
+      "title": "The Blue Marble",
+      "alt": "Full view of planet Earth centered in a black void, showing Africa and the Southern Ocean",
+      "tags": ["earth", "space", "planet", "nature"],
+      "src": "data/images/cat1/nasa-vhSz50AaFAs-unsplash.jpg"
+    },
+    {
+      "id": "21",
+      "title": "Desert Information Kiosk",
+      "alt": "A minimalist, sun-drenched desert structure with a geometric roof under a clear blue sky",
+      "tags": ["architecture", "desert", "minimalism", "sunlight"],
+      "src": "data/images/cat1/dan-begel-yuI_CpM0mcQ-unsplash.jpg"
+    },
+    {
+      "id": "22",
+      "title": "Urban Reflections",
+      "alt": "Close-up of a modern curved glass building reflecting another skyscraper",
+      "tags": ["architecture", "urban", "glass", "reflection"],
+      "src": "data/images/cat1/you-le-B2T68Z6f2_U-unsplash.jpg"
+    },
+    {
+      "id": "23",
+      "title": "Architectural Apex",
+      "alt": "A sharp, symmetrical view of a concrete building corner pointing toward a clear blue sky",
+      "tags": ["architecture", "minimalism", "geometry", "urban"],
+      "src": "data/images/cat1/willian-justen-de-vasconcellos-FeqQOmlTcBI-unsplash.jpg"
+    },
+    {
+      "id": "24",
+      "title": "Sinuous Atrium",
+      "alt": "Black and white shot of high-contrast curved architectural lines looking up at a glass ceiling",
+      "tags": ["architecture", "black and white", "abstract", "interior"],
+      "src": "data/images/cat1/hongjin-wang-nnaphdlX1WY-unsplash.jpg"
+    },
+    {
+      "id": "25",
+      "title": "Ornate Library",
+      "alt": "Floor-to-ceiling bookshelves in a classical baroque library with gold accents",
+      "tags": ["architecture", "banner","interior", "library", "classical"],
+      "src": "data/images/cat1/ahmet-yuksek-6vBqpVyYHX0-unsplash.jpg"
+    },
+    {
+      "id": "26",
+      "title": "St. James Facade",
+      "alt": "Classical building entrance with stone pillars and a balcony during a light snowfall",
+      "tags": ["architecture", "winter", "snow", "classical"],
+      "src": "data/images/cat1/maeva-vigier-56VwcS7rf6M-unsplash.jpg"
+    },
+    {
+      "id": "27",
+      "title": "Brutalist Tower",
+      "alt": "Low angle view of a tall, geometric concrete skyscraper at sunset",
+      "tags": ["architecture", "urban", "brutalism", "skyscraper"],
+      "src": "data/images/cat1/takashi-sakamoto-EZ6ZSOf7PxA-unsplash.jpg"
+    },
+    {
+      "id": "28",
+      "title": "Cathedral Spires",
+      "alt": "Dusk view of ornate gothic spires and statues overlooking a European city",
+      "tags": ["architecture", "cathedral", "statues", "dusk"],
+      "src": "data/images/cat1/anastasiia-buchinskaia-GLbsWvBQk_8-unsplash.jpg"
+    },
+    {
+      "id": "29",
+      "title": "Desert Shed",
+      "alt": "A simple peach-colored wooden garage structure in a dry, sandy landscape",
+      "tags": ["architecture", "minimalism", "desert", "sunlight"],
+      "src": "data/images/cat1/dan-begel-pbfkmEL3QaU-unsplash.jpg"
+    },
+    {
+      "id": "30",
+      "title": "Shadowed Grandeur",
+      "alt": "A dark, atmospheric view of stone pillars and a grand staircase leading toward light",
+      "tags": ["architecture", "interior", "pillars","trending", "cinematic"],
+      "src": "data/images/cat1/peter-herrmann-1__n2B24HB8-unsplash.jpg"
+    },
+    {
+      "id": "31",
+      "title": "The Collector",
+      "alt": "Macro shot of a honeybee with full pollen baskets landing on a small yellow wildflower",
+      "tags": ["nature", "wildlife", "macro", "bee", "pollen"],
+      "src": "data/images/cat1/ankith-choudhary-AbBZKCPzLQQ-unsplash.jpg"
+    },
+    {
+      "id": "32",
+      "title": "Golden Wasp Profile",
+      "alt": "Detailed macro portrait of a yellow and black wasp against a dark background",
+      "tags": ["nature", "wildlife", "macro","trending", "wasp"],
+      "src": "data/images/cat1/usgs-R_W86FHa-Sk-unsplash.jpg"
+    },
+    {
+      "id": "33",
+      "title": "Clover Foraging",
+      "alt": "A fuzzy bumblebee feeding on a white clover flower in a green field",
+      "tags": ["nature", "wildlife", "macro", "bee", "spring"],
+      "src": "data/images/cat1/aaron-burden-2xhOYKK-jAM-unsplash.jpg"
+    },
+    {
+      "id": "34",
+      "title": "Hovering Flight",
+      "alt": "Action shot of a bee in mid-air approaching a cluster of pink flowers",
+      "tags": ["nature", "wildlife","banner", "macro", "bee", "flight"],
+      "src": "data/images/cat1/aaron-burden-6csuZQ9oZcI-unsplash.jpg"
+    },
+    {
+      "id": "35",
+      "title": "Mid-air Precision",
+      "alt": "A bee hovering perfectly still before landing on a white flowering head",
+      "tags": ["nature", "wildlife", "macro", "bee", "flight"],
+      "src": "data/images/cat1/oktay-yildiz-AQMqURILWoU-unsplash.jpg"
+    },
+    {
+      "id": "36",
+      "title": "Sunflower Approach",
+      "alt": "A bee flying toward the vibrant yellow petals of a large sunflower",
+      "tags": ["nature", "wildlife", "macro", "bee", "sunflower"],
+      "src": "data/images/cat1/boris-smokrovic-gr7ZkoZnHXU-unsplash.jpg"
+    },
+    {
+      "id": "37",
+      "title": "Honeycomb Labor",
+      "alt": "Several bees working inside the hexagonal cells of a natural wax honeycomb",
+      "tags": ["nature", "wildlife", "macro", "bee", "honeycomb"],
+      "src": "data/images/cat1/meggyn-pomerleau-hAYy2mFLjS8-unsplash.jpg"
+    },
+    {
+      "id": "38",
+      "title": "Purple Nectar",
+      "alt": "A bee hanging upside down from a purple lavender-like flower to reach nectar",
+      "tags": ["nature", "wildlife", "macro", "bee", "trending","flower"],
+      "src": "data/images/cat1/jason-leung-Qgb9urMZ8lw-unsplash.jpg"
+    },
+    {
+      "id": "39",
+      "title": "Resting Bee",
+      "alt": "Extreme close-up macro of a bee resting on a textured wooden surface",
+      "tags": ["nature", "wildlife", "macro", "bee", "detail"],
+      "src": "data/images/cat1/kai-wenzel-Vypd3SU3uhc-unsplash.jpg"
+    },
+    {
+      "id": "40",
+      "title": "Sunlight Wing Detail",
+      "alt": "Macro shot of a bee with sunlight catching the iridescent transparency of its wings",
+      "tags": ["nature", "wildlife", "macro", "bee", "wings"],
+      "src": "data/images/cat1/ankith-choudhary-AbBZKCPzLQQ-unsplash (1).jpg"
+    },
+    {
+      "id": "41",
+      "title": "English Country Cottage",
+      "alt": "A vibrant yellow two-story brick cottage with a dark slate roof and a green door",
+      "tags": ["architecture", "residential", "cottage", "traditional"],
+      "src": "data/images/cat1/tanya-barrow-8NEfvLmTjg8-unsplash.jpg"
+    },
+    {
+      "id": "42",
+      "title": "Geometric Spiral Stairs",
+      "alt": "Black and white architectural view looking down a triangular spiral staircase",
+      "tags": ["architecture", "interior", "black and white", "minimalism", "geometry"],
+      "src": "data/images/cat1/panashe-tarusenga-M3GPbDTv-d0-unsplash.jpg"
+    }
+  ]
+}
