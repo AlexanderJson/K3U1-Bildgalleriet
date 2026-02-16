@@ -25,7 +25,6 @@ export const mainGallery = async (service) =>
     searchBar.append(input,searchBtn);    
     searchBtn.setAttribute("aria-label", "Search");
 
-
     const chipCategories = ["nature", "space", "architecture", "bee"];
     const chipContainer = document.createElement('div');
     chipContainer.classList.add('chip-container');
@@ -48,8 +47,7 @@ export const mainGallery = async (service) =>
 
     const render = (data) => 
     {
-        galleryDiv.innerHTML = '';
-        galleryDiv.append(galleryContainer(data));
+        galleryDiv.replaceChildren(galleryContainer(data));
     }
 
 
@@ -60,6 +58,15 @@ export const mainGallery = async (service) =>
         currentResult = query ? service.getByTag(query) : service.getTrending();
         render(currentResult);
     }
+
+    galleryDiv.addEventListener('click', (e) => {
+        const img = e.target.closest('.image-frame');
+            if (img) 
+                {
+                    img.classList.toggle("fullsize");
+                    document.body.style.overflow = img.classList.contains('fullsize') ? 'hidden' : '';
+                }
+        });
 
 
 
