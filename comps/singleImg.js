@@ -14,7 +14,6 @@ export const singleImg = (metadata) =>
     img.setAttribute("tabindex", "0");
     img.setAttribute("aria-label", "Open larger image");
 
- 
     figure.append(img);
     return figure;
 
