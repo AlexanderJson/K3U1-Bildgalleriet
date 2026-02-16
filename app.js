@@ -1,4 +1,4 @@
-import { ImageService } from "../data/api/imageService.js";
+import { ImageService } from "./data/api/imageService.js";
 import { mainGallery } from "./screens/mainGallery.js";
 import {imageRepository} from "./data/api/ImageRepository.js"
 import { header } from "./header/header.js";
