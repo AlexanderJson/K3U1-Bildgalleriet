@@ -6,6 +6,7 @@ export const singleImg = (metadata) =>
     img.classList.add("image-frame");
     img.src = metadata.src;
     img.alt = metadata.alt;
+    
     img.loading = "lazy";
     img.decoding = "async";
     // accessibility since they are clickable 
@@ -13,11 +14,7 @@ export const singleImg = (metadata) =>
     img.setAttribute("tabindex", "0");
     img.setAttribute("aria-label", "Open larger image");
 
-    img.addEventListener("click", () =>
-    {
-        img.classList.toggle("fullsize");
-
-    })
+ 
     figure.append(img);
     return figure;
 

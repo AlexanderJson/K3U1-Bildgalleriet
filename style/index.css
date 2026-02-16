@@ -260,25 +260,20 @@ nav li
         }
 
         
+
 .image-frame.fullsize {
     position: fixed;
     inset: 0;
-    margin: auto;
-    width: auto;
-    height: auto;
-    max-width: 90vw;
-    max-height: 90vh;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #000;
+    width: 1288px;
+    height: 1288px;
+    z-index: 9999;
+    object-fit:contain;
+    aspect-ratio: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    border-radius: 0;
     cursor: zoom-out;
-}
-
-
-.image-frame.fullsize {
-    padding: 10px;
+    transform: none !important;
 }
 
 .gallery-grid 

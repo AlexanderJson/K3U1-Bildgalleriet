@@ -8,13 +8,24 @@ export class ImageService
         this.repo = repo;
         this.data = null; 
         this.categorizedData = new Map();
+        this.initialized = null;
 
     }
 
     async init()
     {
-        this.data = await this.repo.fetch();
-        this.categorizedData = this.categorize(this.data.images);
+        // Singleton, otherwise we will rerun all the filter logic over and over
+        if(this.data) return this.data;
+        if(this.initialized) return this.initialized;
+
+        this.initialized = (async () =>
+        {
+            this.data = await this.repo.fetch();
+            this.categorizedData = this.categorize(this.data.images);
+            return this.data;
+        })();
+        return this.initialized;
+
     }
 
 
@@ -82,17 +93,6 @@ export class ImageService
     }
 
 
-    combineByTags(tags = [])
-    {
-        if (!tags.length) return [];
-        const sets = tags
-            .map(tag => this.categorizedData.get(tag.toLowerCase()))
-            .filter(Boolean);
-        if(!sets.length) return [];
-        return [...sets.reduce((acc, set) =>
-            new Set([...acc].filter(img => set.has(img)))
-        )];
-    }
 
 
 }

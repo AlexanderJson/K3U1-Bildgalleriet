@@ -9,14 +9,23 @@ const imageService = new ImageService(repo);
 
 async function initApp()
 {
-    await imageService.init();
 
     header();
     footer();
     const appDiv = document.getElementById('app');
-    const gallery = await mainGallery(imageService);
+    
+    try 
+    {
+        await imageService.init();
+        const gallery = await mainGallery(imageService);
+        appDiv.replaceChildren(gallery);
 
-    appDiv.append(gallery);
+
+    } catch(error)
+    {
+        console.error("Failed to retrieve data", error);
+    }
+    
     return appDiv;
 
 }
